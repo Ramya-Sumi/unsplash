@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Unsplash Images Gallery</title>
+</head>
+<body>
+    <div class="headLine">Unsplash Images</div>
+    <div id="gallery" class="masonry-layout"></div>
+    <div id="modal" class="modal">
+        <div class="modal-content">     
+            <span class="close">Close</span>
+            <h2 id="image-title"></h2>
+            <img id="image-detail" src="" alt="">
+            <p id="image-meta"></p>
+            <button id="prev-btn">Previous</button>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+    <div id="pagination-info"></div> <!-- Added pagination info display -->
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
