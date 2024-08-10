@@ -24,7 +24,16 @@ function fetchImages() {
 function displayImages(data) {
     const gallery = $('#gallery');
     data.forEach((image) => {
-        const imgElement = `<img src="${image.urls.small}" alt="${image.alt_description}" data-id="${image.id}" data-index="${images.indexOf(image)}">`;
+        const imgElement = `
+        <div>
+            <img src="${image.urls.small}" alt="${image.alt_description}" data-id="${image.id}" data-index="${images.indexOf(image)}">
+            <div class="content-div">
+                <span class="txt-div1">Photographer: ${image.user.name}</span>
+                <span class="txt-div2">Location: ${image.user.location !== null ? image.user.location : 'N/A'}</span>
+                <span class="txt-div3">Likes: ${image.likes !== undefined ? image.likes : 'N/A'}</span>
+            </div>
+        </div>
+        `;
         gallery.append(imgElement); 
     });
 }
